@@ -48,10 +48,22 @@ body{
 .deletebtn {
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
   background: #fc035e;
   color: #555;
 }
-
+.updatebtn {
+  padding: 10px;
+  margin: 10px;
+  background: #03fc62;
+  color: #555;
+  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
 .taskcontainer {
   margin: 10px;
   border: none;
