@@ -1,16 +1,62 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
+
+body{
+  background-color: aliceblue;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.heading {
+  color: black;
+  
 }
 
-* {
-  box-sizing: border-box;
+.writtingpad {
+  margin: 10px;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+
+  font-size: 16px;
+}
+
+.submitbtn {
+  padding: 10px;
+  margin: 10px;
+  background: #03dbfc;
+  color: #555;
+  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.viewbtn {
+  padding: 10px;
+  margin: 10px;
+  background: #03fc62;
+  color: #555;
+  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.deletebtn {
+  padding: 10px;
+  margin: 10px;
+  background: #fc035e;
+  color: #555;
+}
+
+.taskcontainer {
+  margin: 10px;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+
+  font-size: 16px;
 }
