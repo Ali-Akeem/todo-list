@@ -20,7 +20,7 @@ function TasksPage() {
       }
     })
     const data = await response.json()
-    console.log(data)
+    fetchTasks()
   }
 
   const deleteTask = async taskId => {
