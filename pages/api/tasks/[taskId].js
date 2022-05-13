@@ -1,7 +1,8 @@
 import { tasks } from "../../../data/tasks";
 
 export default function handler(req, res) {
-    const { taskId } = req.query
+    const { taskId, tasktxt } = req.query
+    
 
     if(req.method === 'GET'){
         const task = tasks.find(
@@ -18,14 +19,18 @@ export default function handler(req, res) {
         tasks.splice(index, 1)
         res.status(200).json(deletedTask)
     } else if (req.method === 'PUT'){
-        {/**
-            tasks.map(task => {
-            if(task.id === taskId){
-                return {...tasks, task}
-            }
-            return task
-        })
-        res.status(200).json(tasks)    
-        */}
+
+        const updTask = tasks.find(
+            (task) => task.id == parseInt(taskId)
+        )
+        const index = tasks.findIndex(
+            (task) => task.id === parseInt(taskId)
+        )
+        tasks[index] = {
+            id: taskId,
+            text: tasktxt
+        }
+        res.status(200).json(updTask)
+        
     }
 }

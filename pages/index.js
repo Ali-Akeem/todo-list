@@ -59,7 +59,18 @@ function TasksPage() {
           return(
             <div className="taskcontainer" key={task.id}>
                 {task.text}
-                <button className="deletebtn" onClick={ () => deleteTask(task.id)}>Delete</button> {/** <button onClick={() => updateTask(task.id)}>Update</button>*/}
+                <button 
+                  className="deletebtn" 
+                  onClick={ () => deleteTask(task.id)}  
+                >
+                  Delete
+                </button> 
+                <button 
+                  className="updatebtn"
+                  onClick={() => updateTask(task.id)}
+                >
+                  Update
+                </button>
             </div>
           )
         })
