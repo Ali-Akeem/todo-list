@@ -2,9 +2,8 @@ export default async function handler(req, res) {
   const { taskId } = req.query;
 
   if (req.method === "GET") {
-    const response = await fetch("http://localhost:3004/tasks");
-    const tasks = await response.json();
-    const task = tasks.find((task) => task.id === parseInt(taskId));
+    const response = await fetch(`http://localhost:3004/tasks/${taskId}`);
+    const task = await response.json();
     res.status(200).json(task);
   } else if (req.method === "DELETE") {
     await fetch(`http://localhost:3004/tasks/${taskId}`, {
